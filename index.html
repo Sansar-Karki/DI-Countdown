@@ -265,6 +265,44 @@
             font-size: 0.85em;
         }
 
+        /* Checklist Section */
+        .checklist-section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #ffffff;
+        }
+
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 15px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 10px;
+            border: 1px solid #333333;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .checklist-item:hover {
+            background: #111111;
+            border-color: #555555;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .checklist-item.checked {
+            text-decoration: line-through;
+            color: #555555;
+        }
+
         /* Footer */
         .footer {
             text-align: center;
@@ -384,6 +422,38 @@
             </ul>
         </div>
 
+        <!-- Checklist Section -->
+        <div class="checklist-section">
+            <h2 class="section-title">Tournament Checklist</h2>
+            <div class="checklist-grid">
+                <label class="checklist-item"><input type="checkbox"> Extra raspberry pi pico</label>
+                <label class="checklist-item"><input type="checkbox"> Glue sticks</label>
+                <label class="checklist-item"><input type="checkbox"> Glue guns</label>
+                <label class="checklist-item"><input type="checkbox"> Tape (LOTS OF TAPE)</label>
+                <label class="checklist-item"><input type="checkbox"> Cardboard</label>
+                <label class="checklist-item"><input type="checkbox"> Box cutter</label>
+                <label class="checklist-item"><input type="checkbox"> Saw</label>
+                <label class="checklist-item"><input type="checkbox"> Computers</label>
+                <label class="checklist-item"><input type="checkbox"> Extra pen</label>
+                <label class="checklist-item"><input type="checkbox"> Extra magnets</label>
+                <label class="checklist-item"><input type="checkbox"> Screw drivers</label>
+                <label class="checklist-item"><input type="checkbox"> Extra servo motors</label>
+                <label class="checklist-item"><input type="checkbox"> Extra wires</label>
+                <label class="checklist-item"><input type="checkbox"> Scissors</label>
+                <label class="checklist-item"><input type="checkbox"> Paint</label>
+                <label class="checklist-item"><input type="checkbox"> String</label>
+                <label class="checklist-item"><input type="checkbox"> Extension cords</label>
+                <label class="checklist-item"><input type="checkbox"> Wires for raspberry pi picos</label>
+                <label class="checklist-item"><input type="checkbox"> Paint brushes</label>
+                <label class="checklist-item"><input type="checkbox"> Sponges</label>
+                <label class="checklist-item"><input type="checkbox"> A bunch of papers</label>
+                <label class="checklist-item"><input type="checkbox"> Extra UV lights</label>
+                <label class="checklist-item"><input type="checkbox"> Power strips/extension cords</label>
+                <label class="checklist-item"><input type="checkbox"> Electrical tape</label>
+                <label class="checklist-item"><input type="checkbox"> Extra mirror stuff</label>
+            </div>
+        </div>
+
         <!-- Links Section -->
         <div class="links-section">
             <h2 class="section-title">Resources</h2>
@@ -433,6 +503,30 @@
 
         updateCountdown();
         setInterval(updateCountdown, 1000);
+
+        // Load saved checklist state from localStorage
+        const checklistCheckboxes = document.querySelectorAll('.checklist-grid input[type="checkbox"]');
+        const savedChecklistState = JSON.parse(localStorage.getItem('diChecklistState') || '{}');
+
+        checklistCheckboxes.forEach((checkbox, index) => {
+            if (savedChecklistState[index]) {
+                checkbox.checked = true;
+                checkbox.closest('.checklist-item').classList.add('checked');
+            }
+            checkbox.addEventListener('change', () => {
+                const state = {};
+                checklistCheckboxes.forEach((cb, i) => {
+                    state[i] = cb.checked;
+                });
+                localStorage.setItem('diChecklistState', JSON.stringify(state));
+
+                if (checkbox.checked) {
+                    checkbox.closest('.checklist-item').classList.add('checked');
+                } else {
+                    checkbox.closest('.checklist-item').classList.remove('checked');
+                }
+            });
+        });
     </script>
 </body>
 </html>
