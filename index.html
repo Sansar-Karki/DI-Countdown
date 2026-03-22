@@ -54,6 +54,12 @@
             color: #666666;
         }
 
+        .team-number {
+            font-size: 0.85em;
+            color: #555555;
+            margin-top: 5px;
+        }
+
         /* Countdown Section */
         .countdown-section {
             text-align: center;
@@ -96,8 +102,8 @@
             margin-top: 10px;
         }
 
-        /* Division Section */
-        .division-section {
+        /* Team Choice Section */
+        .team-choice-section {
             padding: 60px 20px;
             border-bottom: 1px solid #ffffff;
         }
@@ -111,71 +117,39 @@
             text-align: center;
         }
 
-        .division-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .division-card {
-            border: 1px solid #333333;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        .division-role {
-            font-size: 0.7em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #666666;
-            margin-bottom: 15px;
-        }
-
-        .division-name {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.2em;
-            font-weight: 600;
-            letter-spacing: -1px;
-        }
-
-        /* Project Section */
-        .project-section {
-            padding: 60px 20px;
-            border-bottom: 1px solid #ffffff;
-        }
-
-        .project-grid {
+        .team-choice-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        .project-card {
+        .team-choice-card {
             border: 1px solid #333333;
             padding: 30px;
         }
 
-        .project-card h3 {
+        .team-choice-card h3 {
             font-family: 'Inter', sans-serif;
             font-size: 1.3em;
             font-weight: 600;
             letter-spacing: -1px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            color: #666666;
         }
 
-        .project-card p {
-            font-size: 0.95em;
+        .team-choice-card p {
+            font-size: 0.9em;
             color: #888888;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
-        /* Build Box Section */
-        .build-box-section {
+        /* Buildbox Section */
+        .buildbox-section {
             padding: 60px 20px;
             border-bottom: 1px solid #ffffff;
         }
 
-        .build-box-section h3 {
+        .buildbox-section h3 {
             font-family: 'Inter', sans-serif;
             font-size: 1.5em;
             font-weight: 700;
@@ -184,60 +158,82 @@
             text-align: center;
         }
 
-        .build-box-list {
+        .buildbox-list {
             list-style: none;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
-        .build-box-list li {
+        .buildbox-list li {
             padding: 12px 0;
             border-bottom: 1px solid #333333;
-            font-size: 0.95em;
+            font-size: 0.9em;
         }
 
-        .build-box-list li:last-child {
+        .buildbox-list li:last-child {
             border-bottom: none;
         }
 
-        /* Team Choice Section */
-        .team-choice-section {
+        /* Reveal Section */
+        .reveal-section {
             padding: 60px 20px;
             border-bottom: 1px solid #ffffff;
         }
 
-        .team-choice-section h3 {
+        .reveal-section h3 {
             font-family: 'Inter', sans-serif;
             font-size: 1.5em;
             font-weight: 700;
             letter-spacing: -1px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             text-align: center;
         }
 
-        .team-choice-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+        .reveal-list {
+            list-style: none;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
-        .team-choice-card {
-            border: 1px solid #333333;
-            padding: 25px;
-            text-align: center;
-        }
-
-        .team-choice-card h4 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.1em;
-            font-weight: 600;
-            letter-spacing: -1px;
-            margin-bottom: 10px;
-        }
-
-        .team-choice-card p {
+        .reveal-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #333333;
             font-size: 0.9em;
-            color: #888888;
+        }
+
+        .reveal-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Razzle Dazzle Section */
+        .razzle-section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #ffffff;
+        }
+
+        .razzle-section h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5em;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .razzle-list {
+            list-style: none;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .razzle-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #333333;
+            font-size: 0.9em;
+        }
+
+        .razzle-list li:last-child {
+            border-bottom: none;
         }
 
         /* Links Section */
@@ -308,6 +304,7 @@
             <div class="logo">DAKRUZERS</div>
             <div class="subtitle">Destination Imagination 2025-26 Season</div>
             <div class="season">Gameshow Performance + Engineering Challenge</div>
+            <div class="team-number">Team Number: 119-21744</div>
         </div>
 
         <!-- Countdown Section -->
@@ -333,94 +330,58 @@
             </div>
         </div>
 
-        <!-- Division of Labor -->
-        <div class="division-section">
-            <h2 class="section-title">Division of Labor</h2>
-            <div class="division-grid">
-                <div class="division-card">
-                    <div class="division-role">Build Box</div>
-                    <div class="division-name">Sansar</div>
+        <!-- Team Choice Elements -->
+        <div class="team-choice-section">
+            <h2 class="section-title">Team Choice Elements</h2>
+            <div class="team-choice-grid">
+                <div class="team-choice-card">
+                    <h3>Invisible Ink Pens</h3>
+                    <p><strong>Theme:</strong> Ink to Impact</p>
+                    <p>Stay nearly invisible under normal light and "come to life" under UV light for dramatic reveal. Made from recycled highlighters with fluorescent ink. Best mixture: 1:10 ratio of water to fluorescent ink. Used 13 highlighters through testing.</p>
                 </div>
-                <div class="division-card">
-                    <div class="division-role">Razzle Dazzle</div>
-                    <div class="division-name">Sansar</div>
-                </div>
-                <div class="division-card">
-                    <div class="division-role">Art</div>
-                    <div class="division-name">Addu</div>
-                </div>
-                <div class="division-card">
-                    <div class="division-role">Artist</div>
-                    <div class="division-name">Sudhanva</div>
-                </div>
-                <div class="division-card">
-                    <div class="division-role">Artist</div>
-                    <div class="division-name">Saaransh</div>
-                </div>
-                <div class="division-card">
-                    <div class="division-role">Budgeting</div>
-                    <div class="division-name">Kian</div>
-                </div>
-                <div class="division-card">
-                    <div class="division-role">Pens</div>
-                    <div class="division-name">Kian</div>
-                </div>
-                <div class="division-card">
-                    <div class="division-role">Reveal</div>
-                    <div class="division-name">Yusuf</div>
+                <div class="team-choice-card">
+                    <h3>Gameshow Background</h3>
+                    <p><strong>Theme:</strong> Milky Way galaxy</p>
+                    <p>Black background with planet colors and white highlights creating a "out of this world" vibe. Reinforces theme "Ink to Impact" - showing how small things can become powerful. Makes UV ink, LEDs, and light effects stand out dramatically.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Project Section -->
-        <div class="project-section">
-            <h2 class="section-title">Project Overview</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Gameshow Performance</h3>
-                    <p>Themed interactive gameshow experience with synchronized performance and theatrical elements. Features original music, dynamic choreography, and audience participation.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Engineering Challenge</h3>
-                    <p>Custom-built game apparatus, responsive mechanisms, and real-time scoring systems. Innovative design with dynamic obstacles and team-based challenges.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Build Box Section -->
-        <div class="build-box-section">
-            <h3>Build Box Features</h3>
-            <ul class="build-box-list">
-                <li>Custom engineering mechanisms</li>
-                <li>Dynamic obstacle course</li>
-                <li>Real-time scoring display</li>
-                <li>Interactive player stations</li>
-                <li>Responsive game apparatus</li>
-                <li>Precision motion systems</li>
+        <!-- Buildbox Section -->
+        <div class="buildbox-section">
+            <h3>Buildbox (The Gimmick)</h3>
+            <ul class="buildbox-list">
+                <li>Contestants slide drawing into input slot</li>
+                <li>11 ultraviolet LEDs reveal invisible ink sketch</li>
+                <li>Ultrasonic sensor detects paper and triggers shaking motion</li>
+                <li>LED pattern displays on top when processing complete</li>
+                <li>Contestant cranks wheel to display finished output</li>
+                <li>Hands-on experience keeps audience engaged</li>
             </ul>
         </div>
 
-        <!-- Team Choice Section -->
-        <div class="team-choice-section">
-            <h3>Team Choice Elements</h3>
-            <div class="team-choice-grid">
-                <div class="team-choice-card">
-                    <h4>Costumes & Masks</h4>
-                    <p>Custom-designed game show host and contestant costumes</p>
-                </div>
-                <div class="team-choice-card">
-                    <h4>Original Music</h4>
-                    <p>Theme music, game show jingles, and sound effects</p>
-                </div>
-                <div class="team-choice-card">
-                    <h4>Stage Effects</h4>
-                    <p>Lighting, sound effects, and audience participation elements</p>
-                </div>
-                <div class="team-choice-card">
-                    <h4>Performance Elements</h4>
-                    <p>Choreographed routines and theatrical transitions</p>
-                </div>
-            </div>
+        <!-- Reveal Section -->
+        <div class="reveal-section">
+            <h3>Reveal (Curtains)</h3>
+            <ul class="reveal-list">
+                <li>Classic red theater-style curtains</li>
+                <li>Two-segment pulley system for smooth "ta-da" motion</li>
+                <li>Introduce magical pens in dramatic moment</li>
+                <li>Kicks off "Ink to Impact" magic</li>
+                <li>Bamboo frame with reinforced cardboard base</li>
+            </ul>
+        </div>
+
+        <!-- Razzle Dazzle Section -->
+        <div class="razzle-section">
+            <h3>Razzle Dazzle (Light Show)</h3>
+            <ul class="razzle-list">
+                <li>LED flashlight on servo-driven arm</li>
+                <li>Sweeps in repeating color-changing pattern</li>
+                <li>Triggered when winner is announced</li>
+                <li>Reflects off mosaic mirror tiles on stage</li>
+                <li>Final burst of energy celebrating the achievement</li>
+            </ul>
         </div>
 
         <!-- Links Section -->
