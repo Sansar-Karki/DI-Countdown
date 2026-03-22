@@ -24,37 +24,33 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 900px;
             width: 100%;
         }
 
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 70px 20px 50px;
+            padding: 60px 20px;
             border-bottom: 1px solid #ffffff;
         }
 
         .logo {
             font-family: 'Inter', sans-serif;
-            font-size: 3.8em;
+            font-size: 3em;
             font-weight: 800;
-            letter-spacing: -3px;
+            letter-spacing: -2px;
             margin-bottom: 10px;
-            background: linear-gradient(90deg, #ffffff 0%, #666666 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .subtitle {
-            font-size: 1.3em;
+            font-size: 1.1em;
             color: #888888;
             margin-bottom: 10px;
         }
 
         .season {
-            font-size: 0.95em;
+            font-size: 0.9em;
             color: #666666;
         }
 
@@ -64,72 +60,80 @@
             margin-top: 5px;
         }
 
-        .team-tagline {
-            font-size: 0.9em;
-            color: #777777;
-            margin-top: 20px;
-            font-style: italic;
-        }
-
-        /* About Section */
-        .about-section {
+        /* Sections */
+        .section {
             padding: 50px 20px;
             border-bottom: 1px solid #333333;
         }
 
-        .about-section h2 {
-            font-size: 1.8em;
+        .section h2 {
+            font-size: 1.6em;
             font-weight: 700;
             letter-spacing: -1px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             text-align: center;
         }
 
-        .about-section p {
+        .section h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #666666;
+        }
+
+        .section p {
             font-size: 0.95em;
             color: #888888;
             line-height: 1.8;
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto;
+            margin-bottom: 15px;
         }
 
-        .theme-box {
-            margin-top: 30px;
-            padding: 20px;
-            border: 1px solid #333333;
-            text-align: center;
+        .section ul {
+            list-style: none;
+            margin-top: 15px;
         }
 
-        .theme-box h3 {
-            font-size: 1.2em;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .theme-box p {
-            color: #777777;
-            font-size: 0.9em;
-        }
-
-        /* Team Section */
-        .team-section {
-            padding: 60px 20px;
+        .section li {
+            padding: 5px 0;
+            font-size: 0.95em;
+            color: #888888;
             border-bottom: 1px solid #333333;
         }
 
-        .team-section h2 {
-            font-size: 1.8em;
-            font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 40px;
-            text-align: center;
+        .section li:last-child {
+            border-bottom: none;
         }
 
+        /* Grid layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            border: 1px solid #333333;
+            padding: 25px;
+        }
+
+        .card h4 {
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #666666;
+        }
+
+        .card p {
+            font-size: 0.9em;
+            color: #888888;
+            line-height: 1.6;
+        }
+
+        /* Team Section */
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
         }
 
         .team-member {
@@ -137,362 +141,26 @@
         }
 
         .team-member img {
-            width: 140px;
-            height: 140px;
+            width: 100px;
+            height: 100px;
             object-fit: cover;
             border-radius: 50%;
             border: 3px solid #ffffff;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .team-member h4 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: 600;
-            letter-spacing: -1px;
             margin-bottom: 5px;
         }
 
         .team-member p {
-            font-size: 0.8em;
+            font-size: 0.75em;
             color: #888888;
         }
 
-        /* Project Overview Section */
-        .overview-section {
-            padding: 60px 20px;
-            border-bottom: 1px solid #333333;
-        }
-
-        .overview-section h2 {
-            font-size: 1.8em;
-            font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .overview-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
-        }
-
-        .overview-card {
-            border: 1px solid #333333;
-            padding: 30px;
-        }
-
-        .overview-card h3 {
-            font-size: 1.3em;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #666666;
-        }
-
-        .overview-card p {
-            font-size: 0.9em;
-            color: #888888;
-            line-height: 1.7;
-        }
-
-        /* CSS Build Box Diagram */
-        .buildbox-diagram {
-            margin: 40px 0;
-            text-align: center;
-        }
-
-        .buildbox-diagram h3 {
-            font-size: 1.5em;
-            font-weight: 700;
-            margin-bottom: 30px;
-        }
-
-        .buildbox-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 30px 20px;
-            border: 3px solid #ffffff;
-            border-radius: 10px;
-        }
-
-        .buildbox-front {
-            height: 180px;
-            border: 2px solid #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            background: #111111;
-        }
-
-        .buildbox-input {
-            width: 120px;
-            height: 60px;
-            border: 3px solid #ffffff;
-            background: #000000;
-            position: absolute;
-            left: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8em;
-        }
-
-        .buildbox-top {
-            width: 120px;
-            height: 30px;
-            border: 2px solid #ffffff;
-            position: absolute;
-            left: 50%;
-            top: 10px;
-            transform: translateX(-50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.7em;
-        }
-
-        .buildbox-top::after {
-            content: "✓";
-            color: #00ff88;
-            font-size: 1.2em;
-        }
-
-        .buildbox-output {
-            width: 150px;
-            height: 60px;
-            border: 3px solid #ffffff;
-            background: #000000;
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8em;
-        }
-
-        .buildbox-wheel {
-            width: 100px;
-            height: 100px;
-            border: 3px solid #ffffff;
-            border-radius: 50%;
-            position: absolute;
-            left: 50%;
-            bottom: 20px;
-            transform: translateX(-50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8em;
-        }
-
-        .buildbox-controls {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .control-point {
-            text-align: center;
-        }
-
-        .control-point .icon {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        .control-point .label {
-            font-size: 0.9em;
-            color: #888888;
-        }
-
-        /* Engineering Details Section */
-        .engineering-section {
-            padding: 60px 20px;
-            border-bottom: 1px solid #333333;
-        }
-
-        .engineering-section h2 {
-            font-size: 1.8em;
-            font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .engineering-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .detail-card {
-            border: 1px solid #333333;
-            padding: 25px;
-        }
-
-        .detail-card h3 {
-            font-size: 1.2em;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #666666;
-        }
-
-        .detail-card p {
-            font-size: 0.9em;
-            color: #888888;
-            line-height: 1.6;
-        }
-
-        .detail-card ul {
-            list-style: none;
-            margin-top: 15px;
-        }
-
-        .detail-card li {
-            padding: 5px 0;
-            font-size: 0.9em;
-            color: #888888;
-        }
-
-        .detail-card li::before {
-            content: "•";
-            color: #ffffff;
-            margin-right: 10px;
-        }
-
-        /* Team Choice Elements Section */
-        .team-choice-section {
-            padding: 60px 20px;
-            border-bottom: 1px solid #333333;
-        }
-
-        .team-choice-section h2 {
-            font-size: 1.8em;
-            font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .team-choice-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
-        }
-
-        .choice-card {
-            border: 1px solid #333333;
-            padding: 30px;
-        }
-
-        .choice-card h3 {
-            font-size: 1.3em;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #666666;
-        }
-
-        .choice-card p {
-            font-size: 0.9em;
-            color: #888888;
-            line-height: 1.7;
-        }
-
-        /* CSS Team Choice Diagrams */
-        .choice-diagram {
-            margin: 25px 0;
-            padding: 20px;
-            border: 1px solid #333333;
-            text-align: center;
-        }
-
-        .choice-diagram h4 {
-            font-size: 1em;
-            font-weight: 500;
-            margin-bottom: 15px;
-            color: #777777;
-        }
-
-        .diagram-1 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .ink-bottle {
-            width: 40px;
-            height: 50px;
-            border: 2px solid #ffffff;
-            background: #000000;
-            position: relative;
-        }
-
-        .ink-bottle::after {
-            content: "UV";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 0.7em;
-        }
-
-        .arrow {
-            font-size: 2em;
-            color: #666666;
-        }
-
-        .paper {
-            width: 60px;
-            height: 80px;
-            border: 2px solid #ffffff;
-            background: #000000;
-            position: relative;
-        }
-
-        .paper::before {
-            content: "✗";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1.2em;
-            opacity: 0.3;
-        }
-
-        .ink-bottle.revealed {
-            border-color: #00ff88;
-            box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-        }
-
-        .ink-bottle.revealed::after {
-            content: "✓";
-            color: #00ff88;
-        }
-
-        /* Timeline Section */
-        .timeline-section {
-            padding: 60px 20px;
-            border-bottom: 1px solid #333333;
-        }
-
-        .timeline-section h2 {
-            font-size: 1.8em;
-            font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
+        /* Timeline */
         .timeline {
             position: relative;
             max-width: 700px;
@@ -511,87 +179,56 @@
 
         .timeline-item {
             position: relative;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             width: 50%;
         }
 
         .timeline-item:nth-child(odd) {
             left: 0;
-            padding-right: 30px;
+            padding-right: 25px;
             text-align: right;
         }
 
         .timeline-item:nth-child(even) {
             left: 50%;
-            padding-left: 30px;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: #ffffff;
-            border: 3px solid #000000;
-            top: 0;
-        }
-
-        .timeline-item:nth-child(odd)::before {
-            right: -9px;
-        }
-
-        .timeline-item:nth-child(even)::before {
-            left: -9px;
+            padding-left: 25px;
         }
 
         .timeline-date {
-            font-size: 0.85em;
+            font-size: 0.8em;
             color: #666666;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
 
         .timeline-content {
             background: #111111;
-            padding: 15px 20px;
+            padding: 12px 15px;
             border: 1px solid #333333;
         }
 
         .timeline-content h4 {
-            font-size: 1em;
+            font-size: 0.95em;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .timeline-content p {
-            font-size: 0.85em;
+            font-size: 0.8em;
             color: #888888;
+            margin: 0;
             line-height: 1.5;
         }
 
-        /* Resources Section */
-        .resources-section {
-            padding: 60px 20px;
-            border-bottom: 1px solid #333333;
-        }
-
-        .resources-section h2 {
-            font-size: 1.8em;
-            font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
+        /* Resources */
         .resources-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
         }
 
         .resource-card {
             border: 1px solid #333333;
-            padding: 20px;
+            padding: 15px;
         }
 
         .resource-card a {
@@ -599,18 +236,18 @@
             color: #ffffff;
             text-decoration: none;
             font-weight: 500;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
 
         .resource-card span {
             color: #888888;
-            font-size: 0.85em;
+            font-size: 0.8em;
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            padding: 50px 20px;
+            padding: 40px 20px;
             color: #666666;
             font-size: 0.85em;
         }
@@ -620,38 +257,15 @@
             text-decoration: none;
         }
 
-        .footer-links {
-            margin-top: 15px;
-        }
-
-        .footer-links a {
-            color: #888888;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 0.9em;
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .logo {
-                font-size: 2.8em;
-            }
-
-            .timer-unit {
-                padding: 15px 20px;
-            }
-
-            .timer-value {
                 font-size: 2.2em;
             }
 
-            .section-title {
-                font-size: 1.4em;
-            }
-
-            .overview-grid,
-            .team-choice-grid,
-            .engineering-details {
+            .grid-2,
+            .team-grid,
+            .resources-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -675,11 +289,6 @@
             .timeline-item:nth-child(even)::before {
                 left: 11px;
             }
-
-            .buildbox-controls {
-                flex-direction: column;
-                gap: 15px;
-            }
         }
 
         /* Countdown */
@@ -690,11 +299,11 @@
         }
 
         .countdown-title {
-            font-size: 1em;
+            font-size: 0.9em;
             color: #666666;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 25px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
         }
 
         .timer {
@@ -705,13 +314,13 @@
         }
 
         .timer-unit {
-            padding: 15px 25px;
+            padding: 12px 20px;
             border: 1px solid #ffffff;
         }
 
         .timer-value {
             font-family: 'Inter', sans-serif;
-            font-size: 2.2em;
+            font-size: 1.8em;
             font-weight: 700;
             letter-spacing: -2px;
         }
@@ -721,21 +330,7 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #666666;
-            margin-top: 8px;
-        }
-
-        /* Animations */
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
-        }
-
-        .pulse {
-            animation: pulse 2s infinite;
+            margin-top: 6px;
         }
     </style>
 </head>
@@ -747,22 +342,18 @@
             <div class="subtitle">Destination Imagination 2025-26 Season</div>
             <div class="season">Gameshow Performance + Engineering Challenge</div>
             <div class="team-number">Team Number: 119-21744</div>
-            <div class="team-tagline">"Ink to Impact" — Turning small things into something powerful</div>
         </div>
 
         <!-- About Section -->
-        <div class="about-section">
-            <h2>Our Mission</h2>
+        <div class="section">
+            <h2>About</h2>
             <p>We created an immersive gameshow experience that combines engineering with theatrical performance. Our project features a custom-built game apparatus where contestants reveal drawings using invisible ink, accompanied by dramatic reveal curtains and an exciting light show.</p>
-            <div class="theme-box">
-                <h3>Theme: Ink to Impact</h3>
-                <p>Just as invisible ink reveals its true form under UV light, our project demonstrates how small engineering elements can create big impact. The theme reinforces the idea that what seems hidden or subtle can become powerful when brought to light.</p>
-            </div>
+            <p><strong>Theme: Ink to Impact</strong> — Just as invisible ink reveals its true form under UV light, our project demonstrates how small engineering elements can create big impact. The theme reinforces the idea that what seems hidden or subtle can become powerful when brought to light.</p>
         </div>
 
         <!-- Team Section -->
-        <div class="team-section">
-            <h2>Meet The Team</h2>
+        <div class="section">
+            <h2>Team</h2>
             <div class="team-grid">
                 <div class="team-member">
                     <img src="kian.jpg" alt="Kian Vo">
@@ -798,61 +389,28 @@
         </div>
 
         <!-- Build Box Section -->
-        <div class="overview-section">
+        <div class="section">
             <h2>Build Box (The Gimmick)</h2>
-            <div class="buildbox-diagram">
-                <h3>Custom-Built Game Apparatus</h3>
-                <div class="buildbox-container">
-                    <div class="buildbox-top"></div>
-                    <div class="buildbox-input">INPUT</div>
-                    <div class="buildbox-front">
-                        <div class="buildbox-wheel">OUTPUT</div>
-                    </div>
-                    <div class="buildbox-output"></div>
-                </div>
-                <div class="buildbox-controls">
-                    <div class="control-point">
-                        <div class="icon">✎</div>
-                        <div class="label">Slide Drawing</div>
-                    </div>
-                    <div class="control-point">
-                        <div class="icon">◉</div>
-                        <div class="label">UV LEDs Reveal</div>
-                    </div>
-                    <div class="control-point">
-                        <div class="icon">◎</div>
-                        <div class="label">Shake Motion</div>
-                    </div>
-                    <div class="control-point">
-                        <div class="icon">✓</div>
-                        <div class="label">Display Output</div>
-                    </div>
-                </div>
-            </div>
-            <div class="overview-grid">
-                <div class="overview-card">
-                    <h3>How It Works</h3>
-                    <p>Contestants slide their drawing into the input slot. Inside, 11 ultraviolet LEDs reveal the invisible ink sketch. An ultrasonic sensor detects the paper and triggers a shaking motion. Once processed, the LED pattern displays on top, and the contestant cranks a wheel to reveal the finished output.</p>
-                </div>
-                <div class="overview-card">
-                    <h3>Engineering Highlights</h3>
-                    <ul>
-                        <li>Ultrasonic sensor for paper detection</li>
-                        <li>11 UV LEDs for reveal</li>
-                        <li>Servo-driven shake mechanism</li>
-                        <li>Custom crank wheel output display</li>
-                        <li>Hands-on audience engagement</li>
-                    </ul>
-                </div>
-            </div>
+            <p>Custom-built game apparatus where contestants slide drawings into an input slot. Inside, 11 ultraviolet LEDs reveal the invisible ink sketch. An ultrasonic sensor detects the paper and triggers a shaking motion. Once processed, an LED pattern displays on top, and the contestant cranks a wheel to reveal the finished output.</p>
+
+            <h3>Engineering Details</h3>
+            <ul>
+                <li><strong>Input Slot:</strong> Slides into the build box</li>
+                <li><strong>11 UV LEDs:</strong> Positioned to illuminate the paper (395nm wavelength)</li>
+                <li><strong>Ultrasonic Sensor:</strong> Detects paper position and triggers motion</li>
+                <li><strong>Shake Mechanism:</strong> Servo motor creates randomized motion for better ink activation</li>
+                <li><strong>LED Display:</strong> Shows pattern when complete</li>
+                <li><strong>Output Wheel:</strong> Crank to display final result</li>
+                <li><strong>Hands-on Engagement:</strong> Audience interacts with the crank wheel</li>
+            </ul>
         </div>
 
-        <!-- Engineering Details Section -->
-        <div class="engineering-section">
-            <h2>Engineering Details</h2>
-            <div class="engineering-details">
-                <div class="detail-card">
-                    <h3>Components Used</h3>
+        <!-- Engineering Section -->
+        <div class="section">
+            <h2>Engineering</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Components Used</h4>
                     <ul>
                         <li>Raspberry Pi Pico microcontrollers</li>
                         <li>Ultrasonic sensors (HC-SR04)</li>
@@ -864,149 +422,98 @@
                         <li>Mirror tiles (Razzle Dazzle reflection)</li>
                     </ul>
                 </div>
-                <div class="detail-card">
-                    <h3>How Each Mechanism Works</h3>
-                    <ul>
-                        <li><strong>Input Slot:</strong> Slides into the build box</li>
-                        <li><strong>UV LEDs:</strong> 11 LEDs positioned to illuminate the paper</li>
-                        <li><strong>Ultrasonic Sensor:</strong> Detects paper position and triggers motion</li>
-                        <li><strong>Shake Mechanism:</strong> Servo motor creates randomized motion</li>
-                        <li><strong>LED Display:</strong> Shows pattern when complete</li>
-                        <li><strong>Output Wheel:</strong> Crank to display final result</li>
-                    </ul>
-                </div>
-                <div class="detail-card">
-                    <h3>Invisible Ink Formula</h3>
-                    <p><strong>Ratio:</strong> 1:10 water to fluorescent ink<br><br>
-                    <strong>Process:</strong> Mixed 13 highlighters with purified water. Tested multiple ratios for optimal visibility under UV light while remaining nearly invisible under normal light.</p>
-                </div>
-                <div class="detail-card">
-                    <h3>Challenges Solved</h3>
-                    <ul>
-                        <li>UV LED positioning for even coverage</li>
-                        <li>Sensor calibration for reliable detection</li>
-                        <li>Shake motion for better ink activation</li>
-                        <li>Curtain pulley system smooth operation</li>
-                        <li>Light reflection optimization</li>
-                    </ul>
+                <div class="card">
+                    <h4>Invisible Ink Formula</h4>
+                    <p><strong>Ratio:</strong> 1:10 water to fluorescent ink</p>
+                    <p><strong>Process:</strong> Mixed 13 highlighters with purified water. Tested multiple ratios for optimal visibility under UV light while remaining nearly invisible under normal light.</p>
                 </div>
             </div>
+
+            <h3>Challenges Solved</h3>
+            <ul>
+                <li>UV LED positioning for even coverage</li>
+                <li>Sensor calibration for reliable detection</li>
+                <li>Shake motion for better ink activation</li>
+                <li>Curtain pulley system smooth operation</li>
+                <li>Light reflection optimization</li>
+            </ul>
         </div>
 
-        <!-- Team Choice Elements -->
-        <div class="team-choice-section">
+        <!-- Team Choice Section -->
+        <div class="section">
             <h2>Team Choice Elements</h2>
-            <div class="team-choice-grid">
-                <div class="choice-card">
-                    <h3>Invisible Ink Pens</h3>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>Invisible Ink Pens</h4>
                     <p><strong>Theme:</strong> Ink to Impact</p>
-                    <p>Stay nearly invisible under normal light and "come to life" under UV light for dramatic reveal. Made from recycled highlighters with fluorescent ink. Best mixture: 1:10 ratio of water to fluorescent ink. Used 13 highlighters through testing.</p>
-                    <div class="choice-diagram">
-                        <h4>How It Works</h4>
-                        <div class="diagram-1">
-                            <div class="ink-bottle">Ink</div>
-                            <div class="arrow">→</div>
-                            <div class="paper">Paper</div>
-                            <div class="arrow">→</div>
-                            <div class="ink-bottle revealed">Revealed</div>
-                        </div>
-                    </div>
-                    <p><strong>Engineering:</strong> Custom formula using fluorescent dye, tested with 13 different highlighters to achieve optimal visibility under UV light.</p>
+                    <p>Stay nearly invisible under normal light and "come to life" under UV light for dramatic reveal. Best mixture: 1:10 ratio of water to fluorescent ink. Used 13 highlighters through testing.</p>
+                    <p><strong>Engineering:</strong> Custom formula using fluorescent dye, tested with 13 different highlighters.</p>
                 </div>
-                <div class="choice-card">
-                    <h3>Gameshow Background</h3>
+                <div class="card">
+                    <h4>Gameshow Background</h4>
                     <p><strong>Theme:</strong> Milky Way galaxy</p>
-                    <p>Black background with planet colors and white highlights creating a "out of this world" vibe. Reinforces theme "Ink to Impact" - showing how small things can become powerful. Makes UV ink, LEDs, and light effects stand out dramatically.</p>
-                    <div class="choice-diagram">
-                        <h4>Visual Impact</h4>
-                        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
-                            <div style="width: 20px; height: 20px; border-radius: 50%; background: #ffffff;"></div>
-                            <div style="width: 30px; height: 30px; border-radius: 50%; background: #ff6b6b;"></div>
-                            <div style="width: 25px; height: 25px; border-radius: 50%; background: #4ecdc4;"></div>
-                            <div style="width: 35px; height: 35px; border-radius: 50%; background: #ffe66d;"></div>
-                            <div style="width: 20px; height: 20px; border-radius: 50%; background: #ffffff;"></div>
-                        </div>
-                    </div>
-                    <p><strong>Engineering:</strong> Black backdrop with strategically placed colored elements creates high contrast for UV effects and LED displays.</p>
+                    <p>Black background with planet colors and white highlights creating a "out of this world" vibe. Makes UV ink, LEDs, and light effects stand out dramatically.</p>
+                    <p><strong>Engineering:</strong> High contrast black backdrop with strategically placed colored elements.</p>
                 </div>
-                <div class="choice-card">
-                    <h3>Reveal Curtains</h3>
+                <div class="card">
+                    <h4>Reveal Curtains</h4>
                     <p><strong>Theme:</strong> Magical Pen Reveal</p>
-                    <p>Classic red theater-style curtains with two-segment pulley system for smooth "ta-da" motion. Introduce magical pens in dramatic moment to kick off the "Ink to Impact" magic.</p>
-                    <div class="choice-diagram">
-                        <h4>Curtain Mechanism</h4>
-                        <div style="position: relative; height: 60px; display: flex; align-items: center; gap: 5px;">
-                            <div style="flex: 1; height: 50px; border: 2px solid #ffffff;"></div>
-                            <div style="flex: 1; height: 50px; border: 2px solid #ffffff;"></div>
-                            <div style="color: #666666; font-size: 0.7em;">|||</div>
-                        </div>
-                    </div>
-                    <p><strong>Engineering:</strong> Bamboo frame with reinforced cardboard base, pulley system for smooth two-stage opening motion.</p>
+                    <p>Classic red theater-style curtains with two-segment pulley system for smooth "ta-da" motion. Introduce magical pens in dramatic moment.</p>
+                    <p><strong>Engineering:</strong> Bamboo frame with reinforced cardboard base, pulley system.</p>
                 </div>
-                <div class="choice-card">
-                    <h3>Razzle Dazzle</h3>
+                <div class="card">
+                    <h4>Razzle Dazzle</h4>
                     <p><strong>Theme:</strong> Light Show Celebration</p>
-                    <p>LED flashlight on servo-driven arm sweeps in repeating color-changing pattern. Triggered when winner is announced. Reflects off mosaic mirror tiles on stage for final burst of energy.</p>
-                    <div class="choice-diagram">
-                        <h4>Light Show</h4>
-                        <div style="display: flex; justify-content: center; gap: 5px; margin-top: 10px;">
-                            <div style="width: 10px; height: 10px; background: #ff0000; border-radius: 50%;"></div>
-                            <div style="width: 10px; height: 10px; background: #00ff00; border-radius: 50%;"></div>
-                            <div style="width: 10px; height: 10px; background: #0000ff; border-radius: 50%;"></div>
-                            <div style="width: 10px; height: 10px; background: #ffff00; border-radius: 50%;"></div>
-                            <div style="width: 10px; height: 10px; background: #ff00ff; border-radius: 50%;"></div>
-                            <div style="width: 10px; height: 10px; background: #00ffff; border-radius: 50%;"></div>
-                        </div>
-                    </div>
-                    <p><strong>Engineering:</strong> Servo-powered arm with LED flashlight, color-changing sequence, and mirror tile reflection for maximum impact.</p>
+                    <p>LED flashlight on servo-driven arm sweeps in repeating color-changing pattern. Triggered when winner is announced. Reflects off mosaic mirror tiles on stage.</p>
+                    <p><strong>Engineering:</strong> Servo-powered arm, color-changing sequence, mirror tile reflection.</p>
                 </div>
             </div>
         </div>
 
         <!-- Timeline Section -->
-        <div class="timeline-section">
+        <div class="section">
             <h2>Development Timeline</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-date">October 2025</div>
                     <div class="timeline-content">
                         <h4>Project Kickoff</h4>
-                        <p>Team formed, theme selected ("Ink to Impact"), initial brainstorming and concept development.</p>
+                        <p>Team formed, theme selected, initial brainstorming.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">November 2025</div>
                     <div class="timeline-content">
                         <h4>Engineering Design</h4>
-                        <p>Build box mechanics designed, component selection, initial CAD drawings and schematics.</p>
+                        <p>Build box mechanics designed, component selection.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">December 2025</div>
                     <div class="timeline-content">
                         <h4>Prototyping Phase</h4>
-                        <p>Built first prototype of build box, tested UV ink formulas, developed curtain mechanism.</p>
+                        <p>Built first prototype, tested UV ink, developed curtain mechanism.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">January 2026</div>
                     <div class="timeline-content">
                         <h4>Testing & Iteration</h4>
-                        <p>Refined shake mechanism, optimized LED positioning, tested reveal curtains and light show.</p>
+                        <p>Refined shake mechanism, optimized LED positioning.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">February 2026</div>
                     <div class="timeline-content">
                         <h4>Final Assembly</h4>
-                        <p>Completed full system assembly, integrated all components, optimized performance.</p>
+                        <p>Completed full system assembly, optimized performance.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">March 2026</div>
                     <div class="timeline-content">
                         <h4>Final Polish</h4>
-                        <p>Added decorative elements, tested complete performance, prepared for tournament.</p>
+                        <p>Added decorative elements, prepared for tournament.</p>
                     </div>
                 </div>
             </div>
@@ -1036,7 +543,7 @@
         </div>
 
         <!-- Resources Section -->
-        <div class="resources-section">
+        <div class="section">
             <h2>Resources</h2>
             <div class="resources-grid">
                 <div class="resource-card">
@@ -1049,19 +556,15 @@
                 </div>
                 <div class="resource-card">
                     <a href="https://www.notion.so/DI-25-26-Scoring-Guide-Win-It-Big-32a249a54d798177a892f751bc5c0a13" target="_blank">Scoring Guide</a>
-                    <span>Win It Big scoring breakdown</span>
+                    <span>Win It Big</span>
                 </div>
                 <div class="resource-card">
                     <a href="https://www.notion.so/Tournament-Data-Form-Da-Kruzers-328249a54d7981848db7caf376dae5af" target="_blank">Tournament Data Form</a>
-                    <span>Full tournament details</span>
+                    <span>Full details</span>
                 </div>
                 <div class="resource-card">
                     <a href="https://github.com/Sansar-Karki/DI-Countdown" target="_blank">GitHub</a>
-                    <span>Website source code</span>
-                </div>
-                <div class="resource-card">
-                    <a href="https://di-countdown.vercel.app" target="_blank">Live Website</a>
-                    <span>Countdown timer</span>
+                    <span>Website source</span>
                 </div>
             </div>
         </div>
@@ -1069,10 +572,7 @@
         <!-- Footer -->
         <div class="footer">
             <p>DaKruzers © 2025-26 | Destination Imagination</p>
-            <div class="footer-links">
-                <a href="https://github.com/Sansar-Karki/DI-Countdown" target="_blank">GitHub</a>
-                <a href="https://di-countdown.vercel.app" target="_blank">Website</a>
-            </div>
+            <p>Team Number: 119-21744</p>
         </div>
     </div>
 
