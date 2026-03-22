@@ -26,7 +26,7 @@
             background: white;
             border-radius: 20px;
             padding: 40px;
-            max-width: 600px;
+            max-width: 700px;
             width: 100%;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
@@ -34,7 +34,7 @@
         h1 {
             color: #667eea;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             font-size: 2.5em;
         }
 
@@ -42,7 +42,7 @@
             text-align: center;
             font-size: 1.5em;
             color: #764ba2;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .countdown {
@@ -83,6 +83,13 @@
             margin-top: 5px;
         }
 
+        .section-title {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
         .project-info {
             background: #f8f9fa;
             padding: 25px;
@@ -93,13 +100,56 @@
         .project-info h2 {
             color: #667eea;
             margin-bottom: 15px;
-            font-size: 1.8em;
+            font-size: 1.5em;
         }
 
         .project-info p {
             line-height: 1.6;
             color: #333;
+            margin-bottom: 10px;
+        }
+
+        .tasks-section {
+            background: #e8f0fe;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tasks-section h2 {
+            color: #667eea;
             margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .task-item {
+            padding: 10px;
+            border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+            display: flex;
+            align-items: center;
+        }
+
+        .task-item:last-child {
+            border-bottom: none;
+        }
+
+        .task-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .task-text {
+            color: #333;
+            font-size: 1.1em;
         }
 
         .team-section {
@@ -129,6 +179,10 @@
 
             h1 {
                 font-size: 1.8em;
+            }
+
+            .section-title {
+                font-size: 1.5em;
             }
         }
     </style>
@@ -160,11 +214,17 @@
             </div>
         </div>
 
+        <div class="section-title">🎯 Project Overview</div>
         <div class="project-info">
-            <h2>🎯 Our Project: Gameshow Challenge</h2>
+            <h2>Gameshow Challenge</h2>
             <p><strong>Challenge:</strong> Create a themed interactive gameshow experience with synchronized performance and engineering.</p>
             <p><strong>Our Innovation:</strong> We've designed a unique game show format with dynamic obstacles, team-based challenges, and audience participation elements. Our engineering solution features custom-built game apparatus, responsive mechanisms, and real-time scoring systems.</p>
             <p><strong>Performance:</strong> Our show features original music, synchronized choreography, and theatrical elements that bring our gameshow concept to life.</p>
+        </div>
+
+        <div class="section-title">📋 Current Tasks</div>
+        <div class="tasks-section" id="tasks-container">
+            <h2>Fetching tasks...</h2>
         </div>
 
         <div class="team-section">
@@ -192,7 +252,32 @@
             document.getElementById('seconds').textContent = seconds;
         }
 
+        // Tasks data from Notion
+        const tasks = [
+            { number: 1, text: "Razzle Dazzle mechanism" },
+            { number: 2, text: "Build box final idea" },
+            { number: 3, text: "Script updates" },
+            { number: 4, text: "Pen mechanism holder" }
+        ];
+
+        function renderTasks() {
+            const container = document.getElementById('tasks-container');
+            let html = '<h2>Active Tasks</h2>';
+
+            tasks.forEach((task, index) => {
+                html += `
+                    <div class="task-item">
+                        <div class="task-number">${index + 1}</div>
+                        <div class="task-text">${task.text}</div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
         updateCountdown();
+        renderTasks();
         setInterval(updateCountdown, 1000);
     </script>
 </body>
