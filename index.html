@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DaKruzers - DI Tournament Countdown</title>
+    <title>DaKruzers - DI Tournament Showcase</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -24,33 +24,37 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             width: 100%;
         }
 
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 60px 20px;
+            padding: 70px 20px 50px;
             border-bottom: 1px solid #ffffff;
         }
 
         .logo {
             font-family: 'Inter', sans-serif;
-            font-size: 3.5em;
+            font-size: 3.8em;
             font-weight: 800;
-            letter-spacing: -2px;
+            letter-spacing: -3px;
             margin-bottom: 10px;
+            background: linear-gradient(90deg, #ffffff 0%, #666666 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .subtitle {
-            font-size: 1.1em;
+            font-size: 1.3em;
             color: #888888;
             margin-bottom: 10px;
         }
 
         .season {
-            font-size: 0.9em;
+            font-size: 0.95em;
             color: #666666;
         }
 
@@ -60,258 +64,62 @@
             margin-top: 5px;
         }
 
-        /* Countdown Section */
-        .countdown-section {
-            text-align: center;
+        .team-tagline {
+            font-size: 0.9em;
+            color: #777777;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        /* About Section */
+        .about-section {
             padding: 50px 20px;
-            border-bottom: 1px solid #ffffff;
+            border-bottom: 1px solid #333333;
         }
 
-        .countdown-title {
-            font-size: 1em;
-            color: #666666;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 30px;
-        }
-
-        .timer {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .timer-unit {
-            padding: 20px 30px;
-            border: 1px solid #ffffff;
-        }
-
-        .timer-value {
-            font-family: 'Inter', sans-serif;
-            font-size: 3em;
-            font-weight: 700;
-            letter-spacing: -2px;
-        }
-
-        .timer-label {
-            font-size: 0.7em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #666666;
-            margin-top: 10px;
-        }
-
-        /* Team Choice Section */
-        .team-choice-section {
-            padding: 60px 20px;
-            border-bottom: 1px solid #ffffff;
-        }
-
-        .section-title {
-            font-family: 'Inter', sans-serif;
+        .about-section h2 {
             font-size: 1.8em;
             font-weight: 700;
             letter-spacing: -1px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             text-align: center;
         }
 
-        .team-choice-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .team-choice-card {
-            border: 1px solid #333333;
-            padding: 30px;
-        }
-
-        .team-choice-card h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.3em;
-            font-weight: 600;
-            letter-spacing: -1px;
-            margin-bottom: 20px;
-            color: #666666;
-        }
-
-        .team-choice-card p {
-            font-size: 0.9em;
+        .about-section p {
+            font-size: 0.95em;
             color: #888888;
-            line-height: 1.7;
-        }
-
-        /* Buildbox Section */
-        .buildbox-section {
-            padding: 60px 20px;
-            border-bottom: 1px solid #ffffff;
-        }
-
-        .buildbox-section h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.5em;
-            font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 20px;
+            line-height: 1.8;
             text-align: center;
-        }
-
-        .buildbox-list {
-            list-style: none;
             max-width: 700px;
             margin: 0 auto;
         }
 
-        .buildbox-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid #333333;
-            font-size: 0.9em;
-        }
-
-        .buildbox-list li:last-child {
-            border-bottom: none;
-        }
-
-        /* Reveal Section */
-        .reveal-section {
-            padding: 60px 20px;
-            border-bottom: 1px solid #ffffff;
-        }
-
-        .reveal-section h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.5em;
-            font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .reveal-list {
-            list-style: none;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .reveal-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid #333333;
-            font-size: 0.9em;
-        }
-
-        .reveal-list li:last-child {
-            border-bottom: none;
-        }
-
-        /* Razzle Dazzle Section */
-        .razzle-section {
-            padding: 60px 20px;
-            border-bottom: 1px solid #ffffff;
-        }
-
-        .razzle-section h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.5em;
-            font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .razzle-list {
-            list-style: none;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .razzle-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid #333333;
-            font-size: 0.9em;
-        }
-
-        .razzle-list li:last-child {
-            border-bottom: none;
-        }
-
-        /* Links Section */
-        .links-section {
-            padding: 60px 20px;
-        }
-
-        .links-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .link-card {
-            border: 1px solid #333333;
+        .theme-box {
+            margin-top: 30px;
             padding: 20px;
-        }
-
-        .link-card a {
-            display: block;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-
-        .link-card span {
-            color: #888888;
-            font-size: 0.85em;
-        }
-
-        /* Checklist Section */
-        .checklist-section {
-            padding: 60px 20px;
-            border-bottom: 1px solid #ffffff;
-        }
-
-        .checklist-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 15px;
-        }
-
-        .checklist-item {
-            display: flex;
-            align-items: center;
-            padding: 8px 10px;
             border: 1px solid #333333;
-            cursor: pointer;
-            transition: all 0.2s;
+            text-align: center;
         }
 
-        .checklist-item:hover {
-            background: #111111;
-            border-color: #555555;
+        .theme-box h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
         }
 
-        .checklist-item input[type="checkbox"] {
-            margin-right: 10px;
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
-        }
-
-        .checklist-item.checked {
-            text-decoration: line-through;
-            color: #555555;
+        .theme-box p {
+            color: #777777;
+            font-size: 0.9em;
         }
 
         /* Team Section */
         .team-section {
             padding: 60px 20px;
-            border-bottom: 1px solid #ffffff;
+            border-bottom: 1px solid #333333;
         }
 
-        .team-section h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.5em;
+        .team-section h2 {
+            font-size: 1.8em;
             font-weight: 700;
             letter-spacing: -1px;
             margin-bottom: 40px;
@@ -320,7 +128,7 @@
 
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 30px;
         }
 
@@ -329,8 +137,8 @@
         }
 
         .team-member img {
-            width: 150px;
-            height: 150px;
+            width: 140px;
+            height: 140px;
             object-fit: cover;
             border-radius: 50%;
             border: 3px solid #ffffff;
@@ -346,14 +154,463 @@
         }
 
         .team-member p {
+            font-size: 0.8em;
+            color: #888888;
+        }
+
+        /* Project Overview Section */
+        .overview-section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #333333;
+        }
+
+        .overview-section h2 {
+            font-size: 1.8em;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+        }
+
+        .overview-card {
+            border: 1px solid #333333;
+            padding: 30px;
+        }
+
+        .overview-card h3 {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #666666;
+        }
+
+        .overview-card p {
+            font-size: 0.9em;
+            color: #888888;
+            line-height: 1.7;
+        }
+
+        /* CSS Build Box Diagram */
+        .buildbox-diagram {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .buildbox-diagram h3 {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .buildbox-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            border: 3px solid #ffffff;
+            border-radius: 10px;
+        }
+
+        .buildbox-front {
+            height: 180px;
+            border: 2px solid #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: #111111;
+        }
+
+        .buildbox-input {
+            width: 120px;
+            height: 60px;
+            border: 3px solid #ffffff;
+            background: #000000;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+        }
+
+        .buildbox-top {
+            width: 120px;
+            height: 30px;
+            border: 2px solid #ffffff;
+            position: absolute;
+            left: 50%;
+            top: 10px;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7em;
+        }
+
+        .buildbox-top::after {
+            content: "✓";
+            color: #00ff88;
+            font-size: 1.2em;
+        }
+
+        .buildbox-output {
+            width: 150px;
+            height: 60px;
+            border: 3px solid #ffffff;
+            background: #000000;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+        }
+
+        .buildbox-wheel {
+            width: 100px;
+            height: 100px;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+        }
+
+        .buildbox-controls {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .control-point {
+            text-align: center;
+        }
+
+        .control-point .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .control-point .label {
+            font-size: 0.9em;
+            color: #888888;
+        }
+
+        /* Engineering Details Section */
+        .engineering-section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #333333;
+        }
+
+        .engineering-section h2 {
+            font-size: 1.8em;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .engineering-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .detail-card {
+            border: 1px solid #333333;
+            padding: 25px;
+        }
+
+        .detail-card h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #666666;
+        }
+
+        .detail-card p {
+            font-size: 0.9em;
+            color: #888888;
+            line-height: 1.6;
+        }
+
+        .detail-card ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .detail-card li {
+            padding: 5px 0;
+            font-size: 0.9em;
+            color: #888888;
+        }
+
+        .detail-card li::before {
+            content: "•";
+            color: #ffffff;
+            margin-right: 10px;
+        }
+
+        /* Team Choice Elements Section */
+        .team-choice-section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #333333;
+        }
+
+        .team-choice-section h2 {
+            font-size: 1.8em;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .team-choice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+        }
+
+        .choice-card {
+            border: 1px solid #333333;
+            padding: 30px;
+        }
+
+        .choice-card h3 {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #666666;
+        }
+
+        .choice-card p {
+            font-size: 0.9em;
+            color: #888888;
+            line-height: 1.7;
+        }
+
+        /* CSS Team Choice Diagrams */
+        .choice-diagram {
+            margin: 25px 0;
+            padding: 20px;
+            border: 1px solid #333333;
+            text-align: center;
+        }
+
+        .choice-diagram h4 {
+            font-size: 1em;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #777777;
+        }
+
+        .diagram-1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .ink-bottle {
+            width: 40px;
+            height: 50px;
+            border: 2px solid #ffffff;
+            background: #000000;
+            position: relative;
+        }
+
+        .ink-bottle::after {
+            content: "UV";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.7em;
+        }
+
+        .arrow {
+            font-size: 2em;
+            color: #666666;
+        }
+
+        .paper {
+            width: 60px;
+            height: 80px;
+            border: 2px solid #ffffff;
+            background: #000000;
+            position: relative;
+        }
+
+        .paper::before {
+            content: "✗";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2em;
+            opacity: 0.3;
+        }
+
+        .ink-bottle.revealed {
+            border-color: #00ff88;
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+        }
+
+        .ink-bottle.revealed::after {
+            content: "✓";
+            color: #00ff88;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #333333;
+        }
+
+        .timeline-section h2 {
+            font-size: 1.8em;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: #333333;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 30px;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 3px solid #000000;
+            top: 0;
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -9px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -9px;
+        }
+
+        .timeline-date {
+            font-size: 0.85em;
+            color: #666666;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content {
+            background: #111111;
+            padding: 15px 20px;
+            border: 1px solid #333333;
+        }
+
+        .timeline-content h4 {
+            font-size: 1em;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .timeline-content p {
             font-size: 0.85em;
             color: #888888;
+            line-height: 1.5;
+        }
+
+        /* Resources Section */
+        .resources-section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #333333;
+        }
+
+        .resources-section h2 {
+            font-size: 1.8em;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .resource-card {
+            border: 1px solid #333333;
+            padding: 20px;
+        }
+
+        .resource-card a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .resource-card span {
+            color: #888888;
+            font-size: 0.85em;
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             color: #666666;
             font-size: 0.85em;
         }
@@ -363,9 +620,21 @@
             text-decoration: none;
         }
 
+        .footer-links {
+            margin-top: 15px;
+        }
+
+        .footer-links a {
+            color: #888888;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9em;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             .logo {
-                font-size: 2.5em;
+                font-size: 2.8em;
             }
 
             .timer-unit {
@@ -379,6 +648,94 @@
             .section-title {
                 font-size: 1.4em;
             }
+
+            .overview-grid,
+            .team-choice-grid,
+            .engineering-details {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 0;
+                text-align: left;
+            }
+
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(odd)::before,
+            .timeline-item:nth-child(even)::before {
+                left: 11px;
+            }
+
+            .buildbox-controls {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* Countdown */
+        .countdown-section {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid #333333;
+        }
+
+        .countdown-title {
+            font-size: 1em;
+            color: #666666;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .timer-unit {
+            padding: 15px 25px;
+            border: 1px solid #ffffff;
+        }
+
+        .timer-value {
+            font-family: 'Inter', sans-serif;
+            font-size: 2.2em;
+            font-weight: 700;
+            letter-spacing: -2px;
+        }
+
+        .timer-label {
+            font-size: 0.7em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #666666;
+            margin-top: 8px;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
         }
     </style>
 </head>
@@ -390,11 +747,22 @@
             <div class="subtitle">Destination Imagination 2025-26 Season</div>
             <div class="season">Gameshow Performance + Engineering Challenge</div>
             <div class="team-number">Team Number: 119-21744</div>
+            <div class="team-tagline">"Ink to Impact" — Turning small things into something powerful</div>
+        </div>
+
+        <!-- About Section -->
+        <div class="about-section">
+            <h2>Our Mission</h2>
+            <p>We created an immersive gameshow experience that combines engineering with theatrical performance. Our project features a custom-built game apparatus where contestants reveal drawings using invisible ink, accompanied by dramatic reveal curtains and an exciting light show.</p>
+            <div class="theme-box">
+                <h3>Theme: Ink to Impact</h3>
+                <p>Just as invisible ink reveals its true form under UV light, our project demonstrates how small engineering elements can create big impact. The theme reinforces the idea that what seems hidden or subtle can become powerful when brought to light.</p>
+            </div>
         </div>
 
         <!-- Team Section -->
         <div class="team-section">
-            <h3>Meet The Team</h3>
+            <h2>Meet The Team</h2>
             <div class="team-grid">
                 <div class="team-member">
                     <img src="kian.jpg" alt="Kian Vo">
@@ -429,6 +797,221 @@
             </div>
         </div>
 
+        <!-- Build Box Section -->
+        <div class="overview-section">
+            <h2>Build Box (The Gimmick)</h2>
+            <div class="buildbox-diagram">
+                <h3>Custom-Built Game Apparatus</h3>
+                <div class="buildbox-container">
+                    <div class="buildbox-top"></div>
+                    <div class="buildbox-input">INPUT</div>
+                    <div class="buildbox-front">
+                        <div class="buildbox-wheel">OUTPUT</div>
+                    </div>
+                    <div class="buildbox-output"></div>
+                </div>
+                <div class="buildbox-controls">
+                    <div class="control-point">
+                        <div class="icon">✎</div>
+                        <div class="label">Slide Drawing</div>
+                    </div>
+                    <div class="control-point">
+                        <div class="icon">◉</div>
+                        <div class="label">UV LEDs Reveal</div>
+                    </div>
+                    <div class="control-point">
+                        <div class="icon">◎</div>
+                        <div class="label">Shake Motion</div>
+                    </div>
+                    <div class="control-point">
+                        <div class="icon">✓</div>
+                        <div class="label">Display Output</div>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <h3>How It Works</h3>
+                    <p>Contestants slide their drawing into the input slot. Inside, 11 ultraviolet LEDs reveal the invisible ink sketch. An ultrasonic sensor detects the paper and triggers a shaking motion. Once processed, the LED pattern displays on top, and the contestant cranks a wheel to reveal the finished output.</p>
+                </div>
+                <div class="overview-card">
+                    <h3>Engineering Highlights</h3>
+                    <ul>
+                        <li>Ultrasonic sensor for paper detection</li>
+                        <li>11 UV LEDs for reveal</li>
+                        <li>Servo-driven shake mechanism</li>
+                        <li>Custom crank wheel output display</li>
+                        <li>Hands-on audience engagement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Engineering Details Section -->
+        <div class="engineering-section">
+            <h2>Engineering Details</h2>
+            <div class="engineering-details">
+                <div class="detail-card">
+                    <h3>Components Used</h3>
+                    <ul>
+                        <li>Raspberry Pi Pico microcontrollers</li>
+                        <li>Ultrasonic sensors (HC-SR04)</li>
+                        <li>11 UV LEDs (395nm wavelength)</li>
+                        <li>Servo motors (SG90)</li>
+                        <li>Cardboard & bamboo frame</li>
+                        <li>Fluorescent highlighter ink</li>
+                        <li>Polyethylene sheet (retractable curtains)</li>
+                        <li>Mirror tiles (Razzle Dazzle reflection)</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>How Each Mechanism Works</h3>
+                    <ul>
+                        <li><strong>Input Slot:</strong> Slides into the build box</li>
+                        <li><strong>UV LEDs:</strong> 11 LEDs positioned to illuminate the paper</li>
+                        <li><strong>Ultrasonic Sensor:</strong> Detects paper position and triggers motion</li>
+                        <li><strong>Shake Mechanism:</strong> Servo motor creates randomized motion</li>
+                        <li><strong>LED Display:</strong> Shows pattern when complete</li>
+                        <li><strong>Output Wheel:</strong> Crank to display final result</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Invisible Ink Formula</h3>
+                    <p><strong>Ratio:</strong> 1:10 water to fluorescent ink<br><br>
+                    <strong>Process:</strong> Mixed 13 highlighters with purified water. Tested multiple ratios for optimal visibility under UV light while remaining nearly invisible under normal light.</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Challenges Solved</h3>
+                    <ul>
+                        <li>UV LED positioning for even coverage</li>
+                        <li>Sensor calibration for reliable detection</li>
+                        <li>Shake motion for better ink activation</li>
+                        <li>Curtain pulley system smooth operation</li>
+                        <li>Light reflection optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Choice Elements -->
+        <div class="team-choice-section">
+            <h2>Team Choice Elements</h2>
+            <div class="team-choice-grid">
+                <div class="choice-card">
+                    <h3>Invisible Ink Pens</h3>
+                    <p><strong>Theme:</strong> Ink to Impact</p>
+                    <p>Stay nearly invisible under normal light and "come to life" under UV light for dramatic reveal. Made from recycled highlighters with fluorescent ink. Best mixture: 1:10 ratio of water to fluorescent ink. Used 13 highlighters through testing.</p>
+                    <div class="choice-diagram">
+                        <h4>How It Works</h4>
+                        <div class="diagram-1">
+                            <div class="ink-bottle">Ink</div>
+                            <div class="arrow">→</div>
+                            <div class="paper">Paper</div>
+                            <div class="arrow">→</div>
+                            <div class="ink-bottle revealed">Revealed</div>
+                        </div>
+                    </div>
+                    <p><strong>Engineering:</strong> Custom formula using fluorescent dye, tested with 13 different highlighters to achieve optimal visibility under UV light.</p>
+                </div>
+                <div class="choice-card">
+                    <h3>Gameshow Background</h3>
+                    <p><strong>Theme:</strong> Milky Way galaxy</p>
+                    <p>Black background with planet colors and white highlights creating a "out of this world" vibe. Reinforces theme "Ink to Impact" - showing how small things can become powerful. Makes UV ink, LEDs, and light effects stand out dramatically.</p>
+                    <div class="choice-diagram">
+                        <h4>Visual Impact</h4>
+                        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+                            <div style="width: 20px; height: 20px; border-radius: 50%; background: #ffffff;"></div>
+                            <div style="width: 30px; height: 30px; border-radius: 50%; background: #ff6b6b;"></div>
+                            <div style="width: 25px; height: 25px; border-radius: 50%; background: #4ecdc4;"></div>
+                            <div style="width: 35px; height: 35px; border-radius: 50%; background: #ffe66d;"></div>
+                            <div style="width: 20px; height: 20px; border-radius: 50%; background: #ffffff;"></div>
+                        </div>
+                    </div>
+                    <p><strong>Engineering:</strong> Black backdrop with strategically placed colored elements creates high contrast for UV effects and LED displays.</p>
+                </div>
+                <div class="choice-card">
+                    <h3>Reveal Curtains</h3>
+                    <p><strong>Theme:</strong> Magical Pen Reveal</p>
+                    <p>Classic red theater-style curtains with two-segment pulley system for smooth "ta-da" motion. Introduce magical pens in dramatic moment to kick off the "Ink to Impact" magic.</p>
+                    <div class="choice-diagram">
+                        <h4>Curtain Mechanism</h4>
+                        <div style="position: relative; height: 60px; display: flex; align-items: center; gap: 5px;">
+                            <div style="flex: 1; height: 50px; border: 2px solid #ffffff;"></div>
+                            <div style="flex: 1; height: 50px; border: 2px solid #ffffff;"></div>
+                            <div style="color: #666666; font-size: 0.7em;">|||</div>
+                        </div>
+                    </div>
+                    <p><strong>Engineering:</strong> Bamboo frame with reinforced cardboard base, pulley system for smooth two-stage opening motion.</p>
+                </div>
+                <div class="choice-card">
+                    <h3>Razzle Dazzle</h3>
+                    <p><strong>Theme:</strong> Light Show Celebration</p>
+                    <p>LED flashlight on servo-driven arm sweeps in repeating color-changing pattern. Triggered when winner is announced. Reflects off mosaic mirror tiles on stage for final burst of energy.</p>
+                    <div class="choice-diagram">
+                        <h4>Light Show</h4>
+                        <div style="display: flex; justify-content: center; gap: 5px; margin-top: 10px;">
+                            <div style="width: 10px; height: 10px; background: #ff0000; border-radius: 50%;"></div>
+                            <div style="width: 10px; height: 10px; background: #00ff00; border-radius: 50%;"></div>
+                            <div style="width: 10px; height: 10px; background: #0000ff; border-radius: 50%;"></div>
+                            <div style="width: 10px; height: 10px; background: #ffff00; border-radius: 50%;"></div>
+                            <div style="width: 10px; height: 10px; background: #ff00ff; border-radius: 50%;"></div>
+                            <div style="width: 10px; height: 10px; background: #00ffff; border-radius: 50%;"></div>
+                        </div>
+                    </div>
+                    <p><strong>Engineering:</strong> Servo-powered arm with LED flashlight, color-changing sequence, and mirror tile reflection for maximum impact.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="timeline-section">
+            <h2>Development Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">October 2025</div>
+                    <div class="timeline-content">
+                        <h4>Project Kickoff</h4>
+                        <p>Team formed, theme selected ("Ink to Impact"), initial brainstorming and concept development.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">November 2025</div>
+                    <div class="timeline-content">
+                        <h4>Engineering Design</h4>
+                        <p>Build box mechanics designed, component selection, initial CAD drawings and schematics.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">December 2025</div>
+                    <div class="timeline-content">
+                        <h4>Prototyping Phase</h4>
+                        <p>Built first prototype of build box, tested UV ink formulas, developed curtain mechanism.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">January 2026</div>
+                    <div class="timeline-content">
+                        <h4>Testing & Iteration</h4>
+                        <p>Refined shake mechanism, optimized LED positioning, tested reveal curtains and light show.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">February 2026</div>
+                    <div class="timeline-content">
+                        <h4>Final Assembly</h4>
+                        <p>Completed full system assembly, integrated all components, optimized performance.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">March 2026</div>
+                    <div class="timeline-content">
+                        <h4>Final Polish</h4>
+                        <p>Added decorative elements, tested complete performance, prepared for tournament.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Countdown Section -->
         <div class="countdown-section">
             <div class="countdown-title">Tournament Starts In</div>
@@ -452,118 +1035,44 @@
             </div>
         </div>
 
-        <!-- Team Choice Elements -->
-        <div class="team-choice-section">
-            <h2 class="section-title">Team Choice Elements</h2>
-            <div class="team-choice-grid">
-                <div class="team-choice-card">
-                    <h3>Invisible Ink Pens</h3>
-                    <p><strong>Theme:</strong> Ink to Impact</p>
-                    <p>Stay nearly invisible under normal light and "come to life" under UV light for dramatic reveal. Made from recycled highlighters with fluorescent ink. Best mixture: 1:10 ratio of water to fluorescent ink. Used 13 highlighters through testing.</p>
-                </div>
-                <div class="team-choice-card">
-                    <h3>Gameshow Background</h3>
-                    <p><strong>Theme:</strong> Milky Way galaxy</p>
-                    <p>Black background with planet colors and white highlights creating a "out of this world" vibe. Reinforces theme "Ink to Impact" - showing how small things can become powerful. Makes UV ink, LEDs, and light effects stand out dramatically.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Buildbox Section -->
-        <div class="buildbox-section">
-            <h3>Buildbox (The Gimmick)</h3>
-            <ul class="buildbox-list">
-                <li>Contestants slide drawing into input slot</li>
-                <li>11 ultraviolet LEDs reveal invisible ink sketch</li>
-                <li>Ultrasonic sensor detects paper and triggers shaking motion</li>
-                <li>LED pattern displays on top when processing complete</li>
-                <li>Contestant cranks wheel to display finished output</li>
-                <li>Hands-on experience keeps audience engaged</li>
-            </ul>
-        </div>
-
-        <!-- Reveal Section -->
-        <div class="reveal-section">
-            <h3>Reveal (Curtains)</h3>
-            <ul class="reveal-list">
-                <li>Classic red theater-style curtains</li>
-                <li>Two-segment pulley system for smooth "ta-da" motion</li>
-                <li>Introduce magical pens in dramatic moment</li>
-                <li>Kicks off "Ink to Impact" magic</li>
-                <li>Bamboo frame with reinforced cardboard base</li>
-            </ul>
-        </div>
-
-        <!-- Razzle Dazzle Section -->
-        <div class="razzle-section">
-            <h3>Razzle Dazzle (Light Show)</h3>
-            <ul class="razzle-list">
-                <li>LED flashlight on servo-driven arm</li>
-                <li>Sweeps in repeating color-changing pattern</li>
-                <li>Triggered when winner is announced</li>
-                <li>Reflects off mosaic mirror tiles on stage</li>
-                <li>Final burst of energy celebrating the achievement</li>
-            </ul>
-        </div>
-
-        <!-- Checklist Section -->
-        <div class="checklist-section">
-            <h2 class="section-title">Tournament Checklist</h2>
-            <div class="checklist-grid">
-                <label class="checklist-item"><input type="checkbox"> Extra raspberry pi pico</label>
-                <label class="checklist-item"><input type="checkbox"> Glue sticks</label>
-                <label class="checklist-item"><input type="checkbox"> Glue guns</label>
-                <label class="checklist-item"><input type="checkbox"> Tape (LOTS OF TAPE)</label>
-                <label class="checklist-item"><input type="checkbox"> Cardboard</label>
-                <label class="checklist-item"><input type="checkbox"> Box cutter</label>
-                <label class="checklist-item"><input type="checkbox"> Saw</label>
-                <label class="checklist-item"><input type="checkbox"> Computers</label>
-                <label class="checklist-item"><input type="checkbox"> Extra pen</label>
-                <label class="checklist-item"><input type="checkbox"> Extra magnets</label>
-                <label class="checklist-item"><input type="checkbox"> Screw drivers</label>
-                <label class="checklist-item"><input type="checkbox"> Extra servo motors</label>
-                <label class="checklist-item"><input type="checkbox"> Extra wires</label>
-                <label class="checklist-item"><input type="checkbox"> Scissors</label>
-                <label class="checklist-item"><input type="checkbox"> Paint</label>
-                <label class="checklist-item"><input type="checkbox"> String</label>
-                <label class="checklist-item"><input type="checkbox"> Extension cords</label>
-                <label class="checklist-item"><input type="checkbox"> Wires for raspberry pi picos</label>
-                <label class="checklist-item"><input type="checkbox"> Paint brushes</label>
-                <label class="checklist-item"><input type="checkbox"> Sponges</label>
-                <label class="checklist-item"><input type="checkbox"> A bunch of papers</label>
-                <label class="checklist-item"><input type="checkbox"> Extra UV lights</label>
-                <label class="checklist-item"><input type="checkbox"> Power strips/extension cords</label>
-                <label class="checklist-item"><input type="checkbox"> Electrical tape</label>
-                <label class="checklist-item"><input type="checkbox"> Extra mirror stuff</label>
-            </div>
-        </div>
-
-        <!-- Links Section -->
-        <div class="links-section">
-            <h2 class="section-title">Resources</h2>
-            <div class="links-grid">
-                <div class="link-card">
+        <!-- Resources Section -->
+        <div class="resources-section">
+            <h2>Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
                     <a href="https://www.notion.so/07a0636acba04a6088ec344157a1cede" target="_blank">DI Tasks</a>
-                    <span>Track progress</span>
+                    <span>Track project progress</span>
                 </div>
-                <div class="link-card">
+                <div class="resource-card">
                     <a href="https://www.notion.so/Meeting-Agenda-308249a54d7981979c35f26f0621072c" target="_blank">Meeting Agenda</a>
                     <span>Meeting notes</span>
                 </div>
-                <div class="link-card">
+                <div class="resource-card">
                     <a href="https://www.notion.so/DI-25-26-Scoring-Guide-Win-It-Big-32a249a54d798177a892f751bc5c0a13" target="_blank">Scoring Guide</a>
-                    <span>Win It Big</span>
+                    <span>Win It Big scoring breakdown</span>
                 </div>
-                <div class="link-card">
+                <div class="resource-card">
                     <a href="https://www.notion.so/Tournament-Data-Form-Da-Kruzers-328249a54d7981848db7caf376dae5af" target="_blank">Tournament Data Form</a>
                     <span>Full tournament details</span>
+                </div>
+                <div class="resource-card">
+                    <a href="https://github.com/Sansar-Karki/DI-Countdown" target="_blank">GitHub</a>
+                    <span>Website source code</span>
+                </div>
+                <div class="resource-card">
+                    <a href="https://di-countdown.vercel.app" target="_blank">Live Website</a>
+                    <span>Countdown timer</span>
                 </div>
             </div>
         </div>
 
         <!-- Footer -->
         <div class="footer">
-            <p>DaKruzers © 2025-26 | <a href="https://github.com/Sansar-Karki/DI-Countdown" target="_blank">View on GitHub</a></p>
+            <p>DaKruzers © 2025-26 | Destination Imagination</p>
+            <div class="footer-links">
+                <a href="https://github.com/Sansar-Karki/DI-Countdown" target="_blank">GitHub</a>
+                <a href="https://di-countdown.vercel.app" target="_blank">Website</a>
+            </div>
         </div>
     </div>
 
@@ -587,30 +1096,6 @@
 
         updateCountdown();
         setInterval(updateCountdown, 1000);
-
-        // Load saved checklist state from localStorage
-        const checklistCheckboxes = document.querySelectorAll('.checklist-grid input[type="checkbox"]');
-        const savedChecklistState = JSON.parse(localStorage.getItem('diChecklistState') || '{}');
-
-        checklistCheckboxes.forEach((checkbox, index) => {
-            if (savedChecklistState[index]) {
-                checkbox.checked = true;
-                checkbox.closest('.checklist-item').classList.add('checked');
-            }
-            checkbox.addEventListener('change', () => {
-                const state = {};
-                checklistCheckboxes.forEach((cb, i) => {
-                    state[i] = cb.checked;
-                });
-                localStorage.setItem('diChecklistState', JSON.stringify(state));
-
-                if (checkbox.checked) {
-                    checkbox.closest('.checklist-item').classList.add('checked');
-                } else {
-                    checkbox.closest('.checklist-item').classList.remove('checked');
-                }
-            });
-        });
     </script>
 </body>
 </html>
